@@ -1,0 +1,33 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Active Listings</h2>
+    {% for AuctionsList in AuctionsLists %}
+    <span class="border">
+    <div id="container" >
+      <div id="navi">
+      <div id="infoi">
+    <div class="w-75 p-3"class="shadow-lg p-3 mb-5 bg-white rounded" style="background-color: rgb(255, 255, 255); border-style: groove;border-radius: 10px;"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+       
+         <img src="{{ AuctionsList.image.url }} " width="300px",height="121px" class="rounded-sm"></div><div class="col-6"><p class="font-weight-bold"><h4>{{AuctionsList.title}}<h2>${{AuctionsList.price}}</h4>
+          <a href="{% url 'auction' AuctionsList.id %}">
+          <button type='submit' class="btn btn-primary">
+             
+            View Product
+          
+          </button>
+        </a>
+        </div>
+        </p> 
+        </div>
+        </div>
+      </div>
+  </div>
+</div>
+</span>
+    {% endfor %} 
+{% endblock %}

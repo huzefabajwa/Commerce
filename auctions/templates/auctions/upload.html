@@ -1,0 +1,18 @@
+
+{% extends "auctions/layout.html" %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+   <h2>Make Auctions</h2>
+   <div class="shadow-lg p-3 mb-5 bg-white rounded">
+    <form method = 'post' , enctype="multipart/form-data">
+        <div class="shadow-lg p-3 mb-5 bg-white rounded">
+        {% csrf_token %}
+             {{ form|crispy }}
+            </div>
+        <button type='submit' class="btn btn-primary" > Make Auction</button>
+    </form>
+</div>
+
+{% endblock %}
+

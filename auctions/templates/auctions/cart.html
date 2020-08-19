@@ -1,0 +1,9 @@
+{% extends "auctions/layout.html" %}
+{% block body %}
+
+{% for AuctionsList in AuctionsLists %}
+   <div class="shadow-lg p-3 mb-5 bg-white rounded">
+   <img src="{{ AuctionsList.image.url }} " width="300px",height="121px" class="rounded-sm"></div><div class="col-6"><p class="font-weight-bold"><h4>{{AuctionsList.title}}<h2>${{AuctionsList.price}}</h4>    
+   
+{% endfor %}
+{% endblock %}
